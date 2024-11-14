@@ -1,0 +1,5 @@
+/* styles.css */
+.editor pre {
+    @apply bg-gray-800 text-gray-300 p-4 rounded-md;
+  }
+  
