@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { BookOpen, Highlighter, Plus, SunMedium, ChevronRight, ChevronLeft, Maximize2, Minimize2, Search, Moon, Sun, Sparkles } from 'lucide-react'
+import { SunMedium, ChevronRight, ChevronLeft, Maximize2, Minimize2, Search, Moon, Sun} from 'lucide-react'
 import { Camera, Zap, Eye, Sliders, Image, Filter, Activity, Target } from 'lucide-react'; // Import icons from lucide-react
 import "../../src/style/global.css"
 import { Button } from "./ui/button"
@@ -38,7 +38,7 @@ const filters = {
   retroNeon: "hue-rotate(280deg) saturate(250%)"
 } as const;
 
-type FilterButton = typeof filterButtons[number];
+// type FilterButton = typeof filterButtons[number];
 
 // Map each filter to an icon and label for the buttons
 const filterButtons = [

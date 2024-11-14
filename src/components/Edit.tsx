@@ -1,7 +1,6 @@
 import { Editor } from "novel"
 import "../style/Editor.module.css"
 import { useEffect, useState } from "react"
-import type { IHighlight } from "../types";
 import "../style/global.css"
 import type {Content} from "../types" 
 
@@ -12,7 +11,7 @@ interface Props {
 
 export const Edit = ({ note }: Props) => {
 
-  const [content, setContent] = useState({});
+  const [content] = useState({});
   const [editor, seteditor] = useState<any>(null)
   // Function to handle content change
   const handleContentChange = (editor:any) => {

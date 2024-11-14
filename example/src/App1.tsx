@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import {
     AreaHighlight,
     Highlight,
@@ -8,7 +8,6 @@ import {
     Tip,
     InteractivePdfViewer
 } from "./react-pdf-highlighter";
-import { Edit } from "../../src/components/Edit"
 
 
 import type {
@@ -18,7 +17,6 @@ import type {
     ScaledPosition,
 } from "./react-pdf-highlighter";
 
-import { Sidebar } from "./Sidebar";
 import { Spinner } from "./Spinner";
 
 import { testHighlights as _testHighlights } from "./test-highlights";
@@ -57,13 +55,12 @@ const SECONDARY_PDF_URL = "https://arxiv.org/pdf/1604.02480";
 const searchParams = new URLSearchParams(document.location.search);
 const initialUrl = searchParams.get("url") || PRIMARY_PDF_URL //"https://phi-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf" //;
 
-type Props = {}
 
-const App1 = (props: Props) => {
+
+const App1 = () => {
 
 
     const [url, setUrl] = useState(initialUrl);
-    const [value, setValue] = useState<String>("# Hello");
     const [highlights, setHighlights] = useState<Array<IHighlight>>(
         testHighlights[initialUrl] ? [...testHighlights[initialUrl]] : [],
     );

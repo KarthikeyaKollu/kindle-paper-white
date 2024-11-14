@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { motion } from "framer-motion";
 import styles from "../style/Tip.module.css";
-import {Highlighter,NotebookPen,Bookmark } from "lucide-react"
+import {NotebookPen,Bookmark } from "lucide-react"
 
 interface State {
   compact: boolean;
